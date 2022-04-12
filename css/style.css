@@ -780,6 +780,12 @@ form:focus{
 	.act_images img{
 		width: 300px;
 	}
+
+	.act_images h2{
+		text-align: left;
+		font-size: 1.5em; 
+		font-weight: bold;
+	}
 	  
 	.family img{
 		width: 300px;
@@ -791,6 +797,10 @@ form:focus{
 
 	.grid img{
 		width: 300px;
+	}
+
+	.restaurant img{
+		width: 350px;
 	}
 
 }
@@ -880,7 +890,7 @@ form:focus{
 	/*Make the h2 heading match h1*/
 	.act_images h2{
 		text-align: left;
-		font-size: 1.15em; 
+		font-size: 1.35em; 
 		font-weight: bold;
 	}
 
@@ -1014,6 +1024,24 @@ form:focus{
 		background-position: initial;
 	}
 
+	.flip-card { 
+		position: initial;
+		perspective: initial;
+	}
 
+	.flip-card:hover .side:nth-child(1){ 
+		transform: initial;
+	}
+	.flip-focus:focus .side:nth-child(1){
+		transform: initial;
+	}
+
+	.side:nth-child(2) { 
+		position: initial;
+		left: initial;
+		top: initial;
+		transform: initial;
+		display: none;
+	}
 
 }
