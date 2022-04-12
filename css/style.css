@@ -52,7 +52,7 @@ body{
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 70px; 
+	font-size: 90px; 
 	font-weight: bold;
 	color: navajowhite;
 	/* color:lightsalmon; */
@@ -257,9 +257,9 @@ h3 > a{
 .place img{
 	border: dashed 5px black;
 	z-index: 5;
-	margin: 5px;
+	margin: 3px;
 	padding: 40px;
-	width: 300px;
+	width: 400px;
 }
 
 .place > p{
@@ -592,9 +592,6 @@ flip-card:focus{
 
 
 @media screen and (min-width: 1200px){
-	h1{
-		font-size: 95px;
-	}
 	nav a{
 		text-decoration: underline;
     	text-decoration-style: wavy;
@@ -786,7 +783,7 @@ flip-card:focus{
 		z-index: 5;
 		padding: 20px;
 		margin: initial;
-		width: 150px;
+		width: 200px;
 	}
 
 	.family img{
