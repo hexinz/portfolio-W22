@@ -482,7 +482,7 @@ figcaption {
 
 .famous_image, .chinese_image, .family_image, .foreign_image{
 	grid-column-start: 2;
-	border: solid 2px lightblue;
+	width: 380px;
 }
 
 .famous_image{
