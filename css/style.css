@@ -52,7 +52,7 @@ body{
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 90px; 
+	font-size: 55px; 
 	font-weight: bold;
 	color: navajowhite;
 	/* color:lightsalmon; */
@@ -250,16 +250,13 @@ h3 > a{
 	margin: 10px;
 }
 
-.act_images img{
-	width: 600px;
-}
 
 .place img{
 	border: dashed 5px black;
 	z-index: 5;
-	margin: 3px;
-	padding: 40px;
-	width: 400px;
+	margin: 5px;
+	padding: 30px;
+	width: 250px;
 }
 
 .place > p{
@@ -272,7 +269,8 @@ h3 > a{
 	border: dashed 5px black;
 	z-index: 5;
 	margin: 3px;
-	padding: 50px;
+	padding: 30px;
+	width: 250px;
 }
 
 .family > p{
@@ -280,11 +278,6 @@ h3 > a{
 	color: darkred;
 	font-weight: bold;
 }
-
-.family img{
-	width: 300px;
-}
-
 
 .horizontal_align {
 	/* position: static; */
@@ -338,6 +331,7 @@ figcaption {
 .grid img{
 	border: dashed 5px black;
 	padding: 2px;
+	width: 250px;
 }
 
 .grid{
@@ -389,7 +383,7 @@ figcaption {
 
 .grid #homemade{
 	grid-row-start: 1;
-	grid-column: 2 / 3;
+	grid-column: 1 / 4;
 }
 
 .grid #fish{
@@ -419,7 +413,7 @@ figcaption {
 
 .grid #homemade-bbq{
 	grid-row-start: 6;
-	grid-column: 2 / 3;
+	grid-column: 1 / 4;
 }
 
 
@@ -591,7 +585,10 @@ flip-card:focus{
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 800px){
+	h1{
+		font-size: 95px;
+	}
 	nav a{
 		text-decoration: underline;
     	text-decoration-style: wavy;
@@ -765,13 +762,20 @@ flip-card:focus{
 	}
 
 	.act_images img{
-		width: 400px;
+		width: 360px;
 	}
 	  
 	.family img{
-		width: 250px;
+		width: 360px;
 	}
-	
+
+	.place img{
+		width: 360px;
+	}
+
+	.grid img{
+		width: 360px;
+	}
 
 }
 
@@ -783,7 +787,6 @@ flip-card:focus{
 		z-index: 5;
 		padding: 20px;
 		margin: initial;
-		width: 200px;
 	}
 
 	.family img{
