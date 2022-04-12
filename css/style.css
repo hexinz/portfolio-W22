@@ -290,6 +290,18 @@ h3 > a{
 	margin-right:5px;
   }
 
+.flip-card {
+	/* position: static; */
+	/* float: left; */
+	padding: 5px;
+	text-align: left;
+	/* padding-left:5px; 
+	padding-right:5px;   */
+	margin-left:5px; 
+	margin-right:5px;
+  }
+
+
 img{
 	/* border: 2px solid lightblue; */
     /* border: 3px solid black; */
@@ -348,37 +360,38 @@ figcaption {
 .grid #cuttlefish{
 	grid-row-start: 1;
 	grid-column: 2 / 3;
-	transform: rotate(-5deg);
+	transform: rotate(5deg);
 }
 
 .grid #urchin{
 	grid-row-start: 3;
 	grid-column: 2 / 3;
-	transform: rotate(-5deg);
+	transform: rotate(5deg);
+	
 }
 
 .grid #tuna{
 	grid-row-start: 5;
 	grid-column: 2 / 3;
-	transform: rotate(-5deg);
+	transform: rotate(5deg);
 }
 
 .grid #flip-card-1{
 	grid-row-start: 2;
 	grid-column: 2 / 3;
-	transform: rotate(5deg);
+	transform: rotate(-5deg);
 }
 
 .grid #flip-card-2{
 	grid-row-start: 4;
 	grid-column: 2 / 3;
-	transform: rotate(5deg);
+	transform: rotate(-5deg);
 }
 
 .grid #flip-card-3{
 	grid-row-start: 6;
 	grid-column: 2 / 3;
-	transform: rotate(5deg);
+	transform: rotate(-5deg);
 }
 
 .grid #homemade{
@@ -536,53 +549,59 @@ form:focus{
 }
 
 
+.flip-focus {
+    text-decoration: none;
+
+}
+.flip-focus:hover{
+    text-decoration: none;
+}
+.flip-focus:active{
+    text-decoration: none;
+}
+
+
+.flip-card{ 
+	position: relative; 
+	perspective: 1000px; 
+}
+.flip-card:hover .side:nth-child(1){ 
+	transform: rotateY(180deg);
+ }
+.flip-focus:focus .side:nth-child(1){
+	transform: rotateY(180deg);
+}
+ 
+
+.flip-card:hover .side:nth-child(2) { 
+	transform: rotateY(0deg); 
+}
+.flip-focus:focus .side:nth-child(2){
+	transform: rotateY(0deg);
+}
+
+.side { 
+	transition: 0.6s; 
+	transform-style: preserve-3d; 
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden; 
+	width: inherit; 
+	height: inherit; }
+
+.side:nth-child(2) { 
+	position: absolute; 
+	left: inherit;
+	top: 0px;
+	transform: rotateY(180deg); 
+}
+
+
 
 @keyframes title_grow {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-.flip-card {
-	width: 426px;
-	height: 320px;
-	perspective: 1000px;
-}
-  
-.flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.6s;
-	transform-style: preserve-3d;
-	/* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-}
-
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-}
-
-flip-card:hover{
-	outline: 5px solid #0336c2;
-	cursor: pointer;
-}
-
-flip-card:focus{
-	outline: 5px solid #0336c2;
-	cursor: pointer;
-}
-
-.flip-card-front, .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-  
-.flip-card-back {
-	transform: rotateY(180deg);
-}
 
 
 @media screen and (min-width: 800px){
@@ -607,49 +626,46 @@ flip-card:focus{
 
 	.act_images {
 		justify-content: space-around;
-		margin: 30px;
+		margin: 20px;
 	}
 
 	.grid{
-		grid-template-columns: 5fr 5fr 3fr 5fr 5fr;
-		margin: 30px 120px;
+		grid-template-columns: 5fr 5fr 1fr 5fr 5fr;
+		margin: 20px 120px;
 	
 	}
 	
 	.grid #cuttlefish{
 		grid-row-start: 1;
-		grid-column: 1 / 2;
+		grid-column: 1 / 3;
 		transform: rotate(-5deg);
 	}
 	
 	.grid #urchin{
 		grid-row-start: 2;
-		grid-column: 4 / 5;
-		transform: rotate(-5deg);
+		grid-column: 1 / 3;
 	}
 	
 	.grid #tuna{
 		grid-row-start: 3;
-		grid-column: 1 / 2;
+		grid-column: 1 / 3;
 		transform: rotate(-5deg);
 	}
 	
 	.grid #flip-card-1{
 		grid-row-start: 1;
-		grid-column: 4 / 5;
-		transform: rotate(5deg);
+		grid-column: 4 / 6;
 	}
 	
 	.grid #flip-card-2{
 		grid-row-start: 2;
-		grid-column: 1 / 2;
+		grid-column: 4 / 6;
 		transform: rotate(5deg);
 	}
 	
 	.grid #flip-card-3{
 		grid-row-start: 3;
-		grid-column: 4 / 5;
-		transform: rotate(5deg);
+		grid-column: 4 / 6;
 	}
 
 	.grid #homemade{
@@ -762,26 +778,26 @@ flip-card:focus{
 	}
 
 	.act_images img{
-		width: 360px;
+		width: 300px;
 	}
 	  
 	.family img{
-		width: 360px;
+		width: 300px;
 	}
 
 	.place img{
-		width: 360px;
+		width: 300px;
 	}
 
 	.grid img{
-		width: 360px;
+		width: 300px;
 	}
 
 }
 
 
 
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1500px){
 	.place img{
 		border: dashed 4px black;
 		z-index: 5;
@@ -900,34 +916,32 @@ flip-card:focus{
 	
 	.grid #urchin{
 		grid-row-start: 1;
-		grid-column: 4 / 5;
-		transform: rotate(-5deg);
+		grid-column-start: 2;
+		transform: rotate(5deg);
 	}
 	
 	.grid #tuna{
 		grid-row-start: 2;
-		grid-column: 2 / 3;
+		grid-column: 1 / 2;
 		transform: rotate(-5deg);
-		margin-left: 50px;
 	}
 	
 	.grid #flip-card-1{
 		grid-row-start: 1;
-		grid-column: 2 / 3;
-		transform: rotate(5deg);
-		margin-left: 50px;
+		grid-column: 4 / 5;
+		transform: rotate(-5deg);
 	}
 	
 	.grid #flip-card-2{
-		grid-row-start: 2;
-		grid-column: 1 / 2;
+		grid-row-start: 1;
+		grid-column-start: 5;
 		transform: rotate(5deg);
 	}
 	
 	.grid #flip-card-3{
 		grid-row-start: 2;
 		grid-column: 4 / 5;
-		transform: rotate(5deg);
+		transform: rotate(-5deg);
 	}
 
 
@@ -1000,38 +1014,6 @@ flip-card:focus{
 		background-position: initial;
 	}
 
-	.flip-card {
-		width: 426px;
-		height: 320px;
-		perspective: 1000px;
-	}
-	
-	.flip-card-inner {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: initial;
-		transform-style: initial;
-		/* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-	}
 
-  
-	.flip-card:hover .flip-card-inner {
-		transform: initial;
-	}
-	
-	.flip-card-front, .flip-card-back {
-		position: absolute;
-		/* width: 100%;
-		height: 100%; */
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-	}
-	
-	
-	.flip-card-back {
-		transform: rotateY(180deg);
-	}
 
 }
