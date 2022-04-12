@@ -482,7 +482,7 @@ figcaption {
 
 .famous_image, .chinese_image, .family_image, .foreign_image{
 	grid-column-start: 2;
-	width: 380px;
+	width: 350px;
 }
 
 .famous_image{
@@ -505,7 +505,7 @@ figcaption {
 	text-align: center;
 	color: white;
 	font-weight: bold;
-	font-size: 4em;
+	font-size: 3.5em;
 	z-index: 5;
 	grid-column-start: 2;
 }
