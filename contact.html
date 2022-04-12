@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Space+Mono&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ98V9PHKD"></script>
+	<!-- icon Kit -->
+	<script src="https://kit.fontawesome.com/37623896fc.js" crossorigin="anonymous"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-FZ98V9PHKD');
+	</script>
+	<title>Food in Shanghai</title>
+</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+	<!-- Header is a sematic tag page that aids readability -->
+	<header>
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		<nav>
+			<div class="skip"><a href="#main">Skip to Main Content</a></div>
+			<ul>
+				<li><a href = "index.html" >Home Page</a></li>
+				<li><a href = "famous.html" >Famous Food</a></li>
+				<li><a href = "family.html">Family Food</a></li>
+				<li><a href = "chinese.html">Chinese Cuisine</a></li>
+				<li><a href = "foreign.html">Foreign Food</a></li>
+				<li class="active"><a href = "contact.html">Contact Me</a></li>
+			</ul>
+		</nav>
+		<div class="intro">
+			<!-- The h1 is a semantic tag that aids accessibility -->
+			<a href = "#main"><h1>Leave your comment!</h1></a>
+		</div>
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main id="main">
+		<form
+		action="https://formspree.io/f/mzbovral"
+		method="POST"
+	    >
+		<fieldset>
+		  <legend>Leave your comments!</legend>
+
+		  <label for="name_id">Your Name</label>
+		  <input type="text" name="name_id" id="name_id" placeholder="Enter Your Name">
+	  
+		  <label for="email">Your Email</label>
+		  <input type="email" name="email" value="me@me.com" id="email">
+	  
+		  <i class="fa-solid fa-phone"></i>
+		  <label for="phone">Your Phone Number</label>
+		  <input type="tel" name="phone" id="phone" placeholder="Format: 123-456-7890">
+
+		  <!-- <div><span>Format: 123-456-7890</span></div> -->
+	  
+	  
+		  <label for="message">Leave A Message</label>
+		  <textarea name="message" id="message"></textarea>
+	  
+		  <input type="checkbox" name="remember" id="remember"> 
+		  <label for="remember">Remember me</label>
+	  
+		  <input type="submit" value="Submit">
+		</fieldset>
+	   </form>
+	</main>
+
+	<!-- Footer is a sematic tag page that aids readability -->
+	<footer>
+		<p>H. Cora Zhang &copy; 2022; <a href = "contact.html" >Contact Me!</a></p>
+	</footer>
+</body>
+</html>
