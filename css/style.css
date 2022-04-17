@@ -3,6 +3,9 @@ Make the font larger too.*/
 *{
 	font-family: 'Josefin Sans', sans-serif;
 }
+/* html{
+	scroll-behavior: smooth;
+} */
 body{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size:150%;
@@ -602,7 +605,11 @@ form:focus{
     to {opacity: 1;}
 }
 
-
+@media only screen and (max-device-width: 1366px) {
+	.parallax {
+	  background-attachment: scroll;
+	}
+}
 
 @media screen and (min-width: 800px){
 	h1{
@@ -738,7 +745,7 @@ form:focus{
 		grid-row-start: 1;
 	}
 	.famous, .chinese, .fam, .foreign{
-		font-size: 2.5em;
+		font-size: 2.3em;
 	}
 	.famous_image{
 		grid-column-start: 2;
